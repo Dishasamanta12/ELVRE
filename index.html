@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="png" href="White submark1.png">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ELVRE – Jaggery Powder</title>
+ <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f9f9f9;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(24, 56, 24);
+      /* padding: 10px 20px; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
+    /*Dark Mode Styles*/
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode nav a {
+  color: #ffffff;
+}
+
+    #logo img {
+      width: 130px;
+      height: 14vh;
+      border-radius: 70%;
+      filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+    }
+    nav a {
+      color: white;
+      margin-left: 35px;
+      text-decoration: none;
+      position: relative;
+      font-size: 22px;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: #ffd51e;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+/* .hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}  */
+
+/* .hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}  */
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}  */
+
+ /* .hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}  */
+
+ /* .hero-title h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}  */
+
+/* .hero-bottom-text {
+  position: absolute;
+  bottom: 40px; 
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}  */
+
+ /* .hero-bottom-text p {
+  font-size: 20px;
+  margin: 5px 0;
+}   */
+
+
+    .container1 {
+      background-color: #543b23 ;
+      width: 100%; 
+      /* margin: auto; */
+      display: flex;
+      flex-wrap: wrap;
+      /* gap: 40px; */
+      object-fit: cover;
+    }
+    .container1 img {
+      width: 90%;
+      height: 70vh;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+      object-fit: cover;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    .container1 img:hover {
+      transform: scale(1.03);
+    }
+
+    .container2 {
+      background-color: #846954;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      object-fit: cover;
+    }
+    .container2 img {
+      width: 100%;
+      height: 60vh;
+      transition: transform 0.3s ease-in-out;
+      object-fit: cover;
+      border-radius: 20px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+    .container2 img:hover {
+      transform: scale(1.03);
+    }
+
+.container3 {
+  background-color: #543b23 ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap; /* for mobile responsiveness */
+}
+
+.benefits-image {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.benefits-image img {
+  width: 90%;
+  height: 80vh;
+  border-radius: 10px;
+}
+
+.benefits-text {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.benefits-text h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #81be1c;
+  margin-bottom: 20px;
+}
+
+.benefits-text h4 {
+  font-size: 22px;
+  color: #ffd51e;
+  margin: 10px 0 5px;
+}
+
+.benefits-text h6 {
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+}
+
+.container3 img:hover {
+    transform: scale(1.03);
+}
+
+    .container4 {
+      background-color: #846954;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      object-fit: cover;
+    }
+
+    .text {
+      flex: 1;
+      color: white;
+    }
+    .text h1 {
+      text-align: center;
+      margin-left: 10px;
+      font-size: 36px;
+      margin-top: 30px;
+      color: #81be1c;
+      margin-bottom: 20px;
+  ;
+    }
+    .text p {
+      margin-left: 20px;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-right: 20px;
+    }
+    .text h4 {
+      font-size: 22px;
+      margin-left: 30px;
+      font-size: 22px;
+      line-height: 1.6;
+      color: #ffd51e;
+      margin-top: 15px;
+    }
+    .text h6 {
+      font-size: 16px;
+      margin-left: 30px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .footer {
+  background-color: rgb(24, 56, 24); /* Dark Green */
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.social-icons a img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.social-icons {
+  margin: 15px 0;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright img {
+  width: 40px;
+}
+
+
+.typing {
+  font-size: 80px;
+  font-weight: bold;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: white; }
+  100% { border-color: transparent; }
+}
+/* Back to Top Button */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 22px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  
+}
+#backToTopBtn:hover {
+  background-color: #555;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+#darkModeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* Default (light mode) styles */
+.header, .footer {
+  background-color: rgb(24, 56, 24);
+}
+
+/* Dark mode styles */
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: black;
+}
+
+
+/* Default light mode */
+.testimonial-section1{
+  background-color: rgb(24, 56, 24);
+  color: white;
+}
+
+body.dark-mode .testimonial-section1{
+    background-color: black;
+}
+
+
+/* Floating container for both buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 🎁 Gift Icon */
+.gift-icon {
+  font-size: 30px;
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gift-icon:hover {
+  transform: scale(1.1);
+}
+
+.feedbackbtn {
+  background: linear-gradient(45deg, #d76d00, #ffb347);
+  color: white;
+  padding: 18px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feedbackbtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.countdown-timer {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #fef5e7;
+  color: #b55300;
+  font-weight: bold;
+  border: 2px dashed #ffa726;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#testimonial-slideshow {
+  max-width: 600px;
+  margin:auto;
+  padding: 20px; 
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+  /* margin-bottom: 40px; */
+  background-color: white;
+}
+
+.testimonial-box p {
+  margin: 10px 0;
+  font-size: 18px;
+  color:  rgb(24, 56, 24);
+}
+
+.testimonial-box strong {
+  color:  rgb(24, 56, 24);
+  font-size: 20px;
+}
+
+.testimonial-heading {
+  color: white; /* Change to your desired color */
+  text-align: center;
+   margin: 30px 0;
+   margin-top: 0px;
+   padding: 20px;
+}
+
+.order-now-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 1366px;
+  background: linear-gradient(45deg, #d76d00, #ffb347);
+  color: white;
+  padding: 18px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.order-now-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #5e402a;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  border: 1px solid white; /* this ensures vertical & horizontal lines show up */
+  padding: 10px;
+  text-align: left;
+  min-width: 80px; /* optional: helps keep column width neat */
+}
+
+.nutrition-table thead {
+  background-color: #3d2a1a;
+  font-weight: bold;
+}
+
+.nutrition-table td[colspan="2"] {
+  font-weight: bold;
+  background-color: #4a3522;
+}
+
+/* Overlay with slightly dark and blurred background */
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px) brightness(0.6); /* slightly dark and blurred */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}
+
+#intro-logo {
+  width: 150px;
+  animation: logoPop 1s ease forwards;
+}
+
+@keyframes logoPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade out effect */
+#intro-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.hero-section {
+  position: relative;
+  width: 100%; 
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+} 
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+} 
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-title h1 {
+  font-size: 80px;
+  letter-spacing: 5px;
+  font-weight: bold;
+} 
+
+.hero-bottom-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-bottom-text p {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-20px);}
+      10% { opacity: 1; transform: translateY(0);}
+      90% { opacity: 1;}
+      100% { opacity: 0; transform: translateY(-20px);}
+    }
+  </style>
+</head>
+<body>
+
+<div id="intro-overlay">
+  <img src="White submark1.png" alt="Logo" id="intro-logo" />
+</div>
+
+
+
+  <!-- Header -->
+  <header>
+    <div id="logo">
+      <img src="ELVRElogo1.png" alt="ELVRE Logo" />
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#product">Product</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#use">Uses</a>
+      <a href="#contact">Contact</a>
+      <button id="darkModeToggle">🌙</button>
+    </nav>
+  </header>
+
+
+<section id="home" class="section">
+  <div class="hero-section">
+    <div class="overlay"></div>
+<!-- 
+<section id="home" class="section" >
+<div class="hero-section">
+  <img src="hero1.jpg" alt="Jaggery Powder">
+  <div class="overlay"></div>
+   -->
+
+  <!-- Center Title -->
+  <div class="hero-title">
+    <h1><span class="typing"></span></h1>
+  </div>
+
+  <!-- Bottom Text -->
+  <div class="hero-bottom-text" >
+    <p>JAGGERY IS A</p>
+    <p><strong>WHOLESOME GOODNESS –<br>BURSTING WITH MINERALS & VITAMINS</strong></p>
+  </div>
+</div>
+</section>
+
+
+
+  <!-- About -->
+  <section id="about" >
+    <div class="container1">
+      <div style="flex: 1;">
+        <img src="image2.png" alt="About Jaggery"  />
+      </div>
+      <div class="text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+        <h1>About Jaggery</h1>
+        <p>Jaggery is a traditional, natural sweetener crafted from concentrated sugarcane or palm juice, cherished for its rich flavor and remarkable health benefits. It is packed with essential minerals such as iron, calcium, magnesium, and potassium, along with vital vitamins including A, C, D2, E, and B-complex. Jaggery helps improve digestion, purify the blood, detoxify the liver, and boost immunity. Its antioxidant and antiallergic properties support respiratory health, especially in polluted environments. Providing steady, long-lasting energy, jaggery is suitable for all age groups. A staple of both wellness and tradition, it’s an ideal choice for those seeking a naturally nourishing lifestyle. Jaggery is an unrefined sugar product made in Asia and Africa.It’s sometimes referred to as a “non-centrifugal sugar,” because it’s not spun during processing to remove the nutritious molasses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section id="product">
+    <div class="container2">
+      <div class="text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+        <h1>Our Product</h1>
+        <p> At ELVRE, we are deeply committed to bringing you the authentic taste of jaggery powder, crafted from fresh sugarcane juice. Our journey is driven by a passion to preserve tradition while embracing innovation. Backed by a technology-driven team of professionals, we aim to modernize the jaggery-making process, reducing its labor-intensive nature through strategic collaborations with leading Indian institutes. We proudly offer high-quality, chemical-free jaggery powder— with no added colors or preservatives—ensuring purity, taste, and nutrition in every grain. Our sustainable, eco-friendly production practices, combined with a strong distribution network across India, allow us to deliver premium quality at competitive and affordable prices</p>
+      </div>
+      <div style="flex: 1;">
+        <img src="image3.png" alt="Our Product" />
+      </div>
+    </div>
+  </section>
+
+ <!-- Benefits -->
+<section id="benefits">
+  <div class="container3">
+    
+    <div class="benefits-image">
+      <img src="hero1.png" alt="Our Product" />
+    </div>
+    
+    <div class="benefits-text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+      <h1>Benefits of Natural Jaggery</h1>
+      <h4>✅ Rich in Minerals & Antioxidants</h4><h6>Packed with iron, calcium, magnesium, and more</h6>
+      <h4>✅ Detoxifies Liver & Body</h4><h6>Helps flush out toxins naturally</h6>
+      <h4>✅ Boosts Immunity</h4><h6>Strengthens your body’s natural defense</h6>
+      <h4>✅ Purifies Blood</h4><h6>Keeps circulation clean and healthy</h6>
+      <h4>✅ Promotes Respiratory Health</h4><h6>Clears lungs and eases breathing</h6>
+      <h4>✅ Anti-Toxic & Anti-Carcinogenic</h4><h6>Fights harmful substances</h6>
+      <h4>✅ Reduces Stress & Fatigue</h4><h6>Mood and energy booster</h6>
+      <h4>✅ Eases PMS Discomfort</h4><h6>Helps with cramps and hormones</h6>
+    </div>
+
+  </div>
+</section>
+
+  </section>
+
+  <!-- Use Cases -->
+  <section id="use">
+    <div class="container4">
+      <div class="text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+        <h1>Enjoy Jaggery Powder In:</h1>
+        <h4>Tea & Coffee –</h4><h6>A natural touch of sweetness</h6>
+        <h4>Ice Creams & Milkshakes –</h4><h6>Enhance flavor naturally</h6>
+        <h4>Energy Bars & Protein Balls –</h4><h6>Power-packed sweetness</h6>
+        <h4>Breakfast Cereals –</h4><h6>Start healthy and tasty</h6>
+        <h4>In traditional Sweets –</h4><h6>Like Puran Poli, Kheer</h6>
+        <h4>In Cooking and Curries –</h4><h6>Sambar(South india dishes), Gujarati dal, tamarind chutney</h6>
+        <h4>In Detox and Health Drinks –</h4><h6>jeera-gud drink, post-workout natural energy booster</h6>
+      </div>
+      <div style="flex: 1;">
+
+<!-- With this -->
+<table class="nutrition-table">
+  <thead>
+    <tr>
+      <th>NUTRIENT</th>
+      <th>AMOUNT</th>
+      <th>NUTRIENT</th>
+      <th>AMOUNT</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+  <td colspan="1">Carbohydrates</td>
+  <td>&nbsp;</td> <!-- This keeps the border -->
+  <td>Vitamins</strong></td>
+  <td>&nbsp;</td>
+</tr>
+
+    <tr><td>Sucrose</td><td>73 – 78 g</td><td>Provitamin A</td><td>2.1 mg</td></tr>
+    <tr><td>Fructose</td><td>1.6 – 7 g</td><td>Vitamin A</td><td>—</td></tr>
+    <tr><td>Glucose</td><td>1.8 – 7 g</td><td>Vitamin B1</td><td>0.02 mg</td></tr>
+    
+    <!-- ✅ Blank Row -->
+    <tr><td colspan="1"></td><td>&nbsp;</td><td>Vitamin B2</td><td>0.07 mg</td></tr>
+    
+    <!-- ✅ Minerals Section Starts Now -->
+    <tr>
+      <td colspan="1">Minerals</td>
+      <td>&nbsp;</td>
+      <td>Vitamin B5</td>
+      <td>0.01 mg</td>
+    </tr>
+    <tr><td>Calcium</td><td>41 – 100 mg</td><td>Vitamin B6</td><td>0.02 mg</td></tr>
+    <tr><td>Magnesium</td><td>71 – 90 mg</td><td>Vitamin C</td><td>7.1 mg</td></tr>
+    <tr><td>Phosphorus</td><td>20 – 91 mg</td><td>Vitamin D2</td><td>6.60 mg</td></tr>
+    <tr><td>Sodium</td><td>19 – 31 mg</td><td>Vitamin E</td><td>111.40 mg</td></tr>
+    <tr><td>Iron</td><td>10 – 14 mg</td><td>Vitamin PP (Niacin)</td><td>7.1 mg</td></tr>
+    <tr><td>Manganese</td><td>0.2 – 0.6 mg</td><td colspan="1">Other Components</td><td>&nbsp;</td></tr>
+    <tr><td>Zinc</td><td>0.3 – 0.4 mg</td><td>Protein</td><td>281 mg</td></tr>
+    <tr><td>Chloride</td><td>5.4 – 0 mg</td><td>Water</td><td>1.6 – 7 g</td></tr>
+    <tr><td>Copper</td><td>0.4 – 0.9 mg</td><td>Calories</td><td>312 kcal</td></tr>
+  </tbody>
+</table>
+
+
+      </div>
+  </section>
+  
+<div class="testimonial-section1">
+<section id="testimonial-section" >
+  <h2 class="testimonial-heading" style="font-size: 32px;">🌟 What Our Customers Say</h2>
+  <div id="testimonial-slideshow">
+    <div id="testimonial-content" class="testimonial-box"></div>
+  </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<section id="contact">
+<footer class="footer" >
+  <div class="footer-logo"data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000" >
+    <img src="ELVRElogo1.png" alt="Elvre Logo">
+  </div>
+
+  <div class="social-icons" >
+    <a href="#"><img src="facebook (1).png" alt="Facebook"></a>
+    <a href="#"><img src="instagram (1).png" alt="Instagram"></a>
+    <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+    <a href="#"><img src="whatsapp (1).png" alt="WhatsApp"></a>
+  </div>
+
+  <div class="copyright">
+    <img src="ELVRElogo1.png"alt="Elvre Logo Small">
+    <p>© 2025 Elvre. All rights reserved.</p>
+  </div>
+
+</footer>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  AOS.init();
+  const text = "JAGGERY POWDER";
+  const speed = 100; // Typing speed in milliseconds
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.querySelector(".typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  window.onload = typeEffect; // Start typing when page loads
+
+// Show the button after scrolling down 200px
+window.onscroll = function() {
+  let btn = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+// Scroll to top when clicked
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+//dark mode
+
+const toggleBtn = document.getElementById('darkModeToggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+//animated scroll
+ScrollReveal({
+  reset: true,
+  distance: '60px',
+  duration: 1000,
+  delay: 200
+});
+
+// Remove footer & social-icons from here
+ScrollReveal().reveal('.section h2, .section p', {
+  origin: 'bottom'
+});
+
+ScrollReveal().reveal('.hero-content, .hero-img', {
+  origin: 'left',
+  delay: 300
+});
+
+
+// Close modal when X is clicked
+document.querySelector(".close").addEventListener("click", function () {
+  document.getElementById("giftModal").style.display = "none";
+});
+
+// Close modal if user clicks outside the modal box
+window.addEventListener("click", function (event) {
+  const modal = document.getElementById("giftModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+
+ <!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+ 
+<!-- Floating Gift Icon + Order Now Button -->
+<div class="floating-buttons">
+  <div id="openModalBtn" class="gift-icon" title="Claim your gift!">🎁</div>
+  <a href="feedback.html" class="feedbackbtn" target="_blank" title="give feedback"> Feedback</a>
+</div>
+
+<!-- Modal -->
+<div id="giftModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>🎁 Special Gift for You!</h2>
+    <p>Use code <strong>JAGGERY10</strong> to get 10% off your first order!</p>
+
+    <!-- ✅ Countdown Timer goes HERE (inside modal-content) -->
+    <div id="countdown" class="countdown-timer">
+      ⏳ Offer ends in: 
+      <span id="days">0</span>d 
+      <span id="hours">0</span>h 
+      <span id="minutes">0</span>m 
+      <span id="seconds">0</span>s
+    </div>
+  </div>
+</div>
+
+<script>
+// Open modal when gift button is clicked
+  const modal = document.getElementById("giftModal");
+  const btn = document.getElementById("openModalBtn");
+  const span = document.querySelector(".close");
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  const offerEnd = new Date("June 20, 2025 23:59:59").getTime();
+
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const diff = offerEnd - now;
+
+    if (diff <= 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "🔥 Offer has ended!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
+
+  // Star rating logic
+  document.querySelectorAll(".star-rating span").forEach(star => {
+    star.addEventListener("click", function () {
+      const value = this.getAttribute("data-value");
+      document.getElementById("starValue").value = value;
+      document.querySelectorAll(".star-rating span").forEach(s => {
+        s.classList.remove("active");
+        if (s.getAttribute("data-value") <= value) {
+          s.classList.add("active");
+        }
+      });
+    });
+  });
+ 
+  const testimonialBox = document.getElementById("testimonial-slideshow");
+  const testimonialContent = document.getElementById("testimonial-content");
+
+  const feedbacks = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+  let index = 0;
+
+  function showTestimonial(i) {
+    if (feedbacks.length === 0) {
+      testimonialBox.style.display = "none";
+      return;
+    }
+
+    const item = feedbacks[i];
+    testimonialContent.innerHTML = `
+      <strong>${item.name}</strong>
+      <p>${item.feedback}</p>
+      <p style="color: gold;">${"★".repeat(item.stars)}${"☆".repeat(5 - item.stars)}</p>
+    `;
+
+    testimonialBox.style.display = "block";
+  }
+
+  function showNextTestimonial() {
+    index = (index + 1) % feedbacks.length;
+    showTestimonial(index);
+  }
+
+  function showPrevTestimonial() {
+    index = (index - 1 + feedbacks.length) % feedbacks.length;
+    showTestimonial(index);
+  }
+
+  // Initial show
+  showTestimonial(index);
+
+  // Auto rotate every 5 seconds
+  setInterval(showNextTestimonial, 3000);
+
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("intro-overlay").classList.add("fade-out");
+    }, 3000); // 2 second delay
+  });
+
+</script>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSciH1m2eFeV4wN3Q-XoGAmLpZONoKcidottQM3s9UCXSigsjw/viewform?usp=dialog" target="_blank" class="order-now-btn">🛒Order Now</a>
+
+<script>
+  const hero = document.querySelector('.hero-section');
+  const images = [
+    'hero1.png',
+    'hero2.png',
+    'hero3.png',
+    'hero4.png'
+  ];
+
+  let X = 0;
+
+  function changeBackground() {
+    X = (X + 1) % images.length;
+    hero.style.backgroundImage = `url('${images[X]}')`;
+  }
+
+  // Load first image
+  hero.style.backgroundImage = `url('${images[X]}')`;
+
+  // Change every 5 seconds
+  setInterval(changeBackground, 3000);
+</script>
+
+
+
+</body>
+</html>

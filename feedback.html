@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="png" href="White submark1.png">
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('feedbackimg.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* padding-left: 80px */
+    }
+
+    #feedback-section {
+      background-color: rgba(255, 255, 255, 0.4); /* white with slight transparency */
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    #feedback-section h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #feedbackForm input,
+    #feedbackForm textarea {
+      width: 100%;
+      padding: 14px; /* more comfortable */
+      margin: 15px -15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .star-rating {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 20px;
+    }
+
+    .star-rating span {
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .star-rating span.active {
+      color: gold;
+    }
+
+    #feedbackForm button {
+      background-color: orange;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #feedbackForm button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Feedback Section -->
+  <section id="feedback-section">
+    <h2>🌟 Give Your Feedback</h2>
+    <form id="feedbackForm">
+      <input type="text" id="userName" placeholder="Your Name" required>
+      <textarea id="userFeedback" rows="4" placeholder="Your Feedback" required></textarea>
+
+      <div class="star-rating">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+      <input type="hidden" id="starValue" value="0">
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("userName").value.trim();
+      const feedback = document.getElementById("userFeedback").value.trim();
+      const stars = document.getElementById("starValue").value;
+
+      if (!name || !feedback || stars === "0") {
+        alert("Please fill out all fields and select a star rating.");
+        return;
+      }
+
+      const feedbackItem = { name, feedback, stars: parseInt(stars) };
+      const existing = JSON.parse(localStorage.getItem("testimonials")) || [];
+      existing.push(feedbackItem);
+      localStorage.setItem("testimonials", JSON.stringify(existing));
+
+      alert("Thank you for your feedback!");
+      this.reset();
+      document.getElementById("starValue").value = 0;
+      document.querySelectorAll(".star-rating span").forEach(s => s.classList.remove("active"));
+    });
+
+    document.querySelectorAll(".star-rating span").forEach(star => {
+      star.addEventListener("click", () => {
+        const val = parseInt(star.getAttribute("data-value"));
+        document.getElementById("starValue").value = val;
+
+        document.querySelectorAll(".star-rating span").forEach((s, index) => {
+          s.classList.toggle("active", index < val);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
