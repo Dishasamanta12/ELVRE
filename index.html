@@ -41,21 +41,22 @@ body.dark-mode {
 .dark-mode header,
 .dark-mode footer {
   background-color: #1e1e1e;
-}
+} 
 
 .dark-mode nav a {
   color: #ffffff;
 }
 
     #logo img {
-      width: 130px;
       height: 14vh;
+      width: 100px;
       border-radius: 70%;
       filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
     }
     nav a {
       color: white;
-      margin-left: 35px;
+      margin-left: 20px;
+      margin: 10px;
       text-decoration: none;
       position: relative;
       font-size: 22px;
@@ -74,61 +75,6 @@ body.dark-mode {
       width: 100%;
     }
 
-/* .hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}  */
-
-/* .hero-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}  */
-
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}  */
-
- /* .hero-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 2;
-}  */
-
- /* .hero-title h1 {
-  font-size: 60px;
-  letter-spacing: 5px;
-  font-weight: bold;
-}  */
-
-/* .hero-bottom-text {
-  position: absolute;
-  bottom: 40px; 
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-align: center;
-  z-index: 2;
-}  */
-
- /* .hero-bottom-text p {
-  font-size: 20px;
-  margin: 5px 0;
-}   */
-
-
     .container1 {
       background-color: #543b23 ;
       width: 100%; 
@@ -137,6 +83,8 @@ body.dark-mode {
       flex-wrap: wrap;
       /* gap: 40px; */
       object-fit: cover;
+      max-width: 100%;
+
     }
     .container1 img {
       width: 90%;
@@ -154,6 +102,7 @@ body.dark-mode {
 
     .container2 {
       background-color: #846954;
+      max-width: 100%;
       width: 100%;
       margin: auto;
       display: flex;
@@ -176,6 +125,8 @@ body.dark-mode {
 
 .container3 {
   background-color: #543b23 ;
+  max-width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -224,6 +175,7 @@ body.dark-mode {
 
     .container4 {
       background-color: #846954;
+      max-width: 100%;
       width: 100%;
       margin: auto;
       display: flex;
@@ -415,7 +367,7 @@ body.dark-mode .testimonial-section1{
   color: white;
   padding: 18px 32px;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -506,19 +458,19 @@ body.dark-mode .testimonial-section1{
 
 .order-now-btn {
   position: fixed;
-  bottom: 25px;
+  bottom: 40px;
   right: 90px;
   background: linear-gradient(45deg, #d76d00, #ffb347);
   color: white;
-  padding: 18px 32px;
+  padding: 14px 24px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-size: 14px;
   z-index: 1000;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 
 .order-now-btn:hover {
   transform: scale(1.05);
@@ -650,6 +602,129 @@ body, html {
 }
 
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  #darkModeToggle {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo img {
+    height: 10vh;
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container1 img,
+  .container2 img,
+  .container3 img {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .container3 {
+    flex-direction: column;
+  }
+
+  .benefits-image,
+  .benefits-text {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title h1 {
+    font-size: 36px;
+  }
+
+  .hero-bottom-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  #testimonial-slideshow {
+    padding: 10px;
+  }
+
+  .testimonial-box p {
+    font-size: 16px;
+  }
+
+  .testimonial-box strong {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .social-icons a img {
+    width: 30px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .floating-buttons {
+    left: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gift-icon {
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  .feedbackbtn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nutrition-table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+
 
     @keyframes fadeInOut {
       0% { opacity: 0; transform: translateY(-20px);}
@@ -657,6 +732,7 @@ body, html {
       90% { opacity: 1;}
       100% { opacity: 0; transform: translateY(-20px);}
     }
+    
   </style>
 </head>
 <body>
