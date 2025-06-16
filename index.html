@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="png" href="White submark1.png">
+    <link rel="icon" type="png" href="Whitesubmark1.png">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -423,6 +423,7 @@ body.dark-mode {
    margin: 30px 0;
    margin-top: 0px;
    padding: 20px;
+   font-size: 32px;
 }
 
 .order-now-btn {
@@ -445,26 +446,26 @@ body.dark-mode {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 /* Overlay with slightly dark and blurred background */
-#intro-overlay {
+/* #intro-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(5px) brightness(0.6); /* slightly dark and blurred */
+  backdrop-filter: blur(5px) brightness(0.6);
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 1s ease;
-}
+} */
 
-#intro-logo {
+/* #intro-logo {
   width: 150px;
   animation: logoPop 1s ease forwards;
-}
+} */
 
-@keyframes logoPop {
+/* @keyframes logoPop {
   0% {
     transform: scale(0.5);
     opacity: 0;
@@ -473,13 +474,26 @@ body.dark-mode {
     transform: scale(1);
     opacity: 1;
   }
-}
+} */
 
 /* Fade out effect */
-#intro-overlay.fade-out {
+/* #intro-overlay.fade-out {
   opacity: 0;
   pointer-events: none;
+} */
+.hero-logo-img {
+  width: 100px; /* or any size you prefer */
+  height: auto;
+  margin-bottom: 10px;
+  z-index: 1000;
 }
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+}
+
 
 
 .hero-section {
@@ -604,6 +618,18 @@ body, html {
 }
 
 @media (max-width: 768px) {
+  .hero-logo-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  z-index: 1000;
+}
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
   .footer-logo img {
     width: 150px;
   }
@@ -763,6 +789,9 @@ body, html {
 
 /* On small devices like Redmi 7S */
 @media screen and (max-width: 768px) {
+  .testimonial-heading{
+    font-size: 24px;
+  }
   .table-container {
     margin: 0 0 20px 0;
   }
@@ -926,6 +955,12 @@ body.dark-mode .testimonial-section1 {
 <section id="home" class="section">
   <div class="hero-section">
     <div class="overlay"></div>
+
+<!-- ✅ Logo above the title -->
+    <div class="hero-logo" style="text-align: center;">
+      <img src="Whitesubmark1.png" alt="ELVRE seconadary Logo" class="hero-logo-img" />
+    </div>
+
   <!-- Center Title -->
   <div class="hero-title">
     <h1><span class="typing"></span></h1>
@@ -1005,13 +1040,20 @@ body.dark-mode .testimonial-section1 {
     <div class="container4">
       <div class="text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
         <h1>Enjoy Jaggery Powder In:</h1>
-        <h4>✅Tea & Coffee –</h4><h6>A natural touch of sweetness</h6>
-        <h4>✅Ice Creams & Milkshakes –</h4><h6>Enhance flavor naturally</h6>
-        <h4>✅Energy Bars & Protein Balls –</h4><h6>Power-packed sweetness</h6>
-        <h4>✅Breakfast Cereals –</h4><h6>Start healthy and tasty</h6>
-        <h4>✅In traditional Sweets –</h4><h6>Like Puran Poli, Kheer</h6>
-        <h4>✅In Cooking and Curries –</h4><h6>Sambar(South india dishes), Gujarati dal, tamarind chutney</h6>
-        <h4>✅In Detox and Health Drinks –</h4><h6>jeera-gud drink, post-workout natural energy booster</h6>
+        <h4>✅Tea & Coffee </h4>
+        <!-- <h6>A natural touch of sweetness</h6> -->
+        <h4>✅Ice Creams & Milkshakes </h4>
+        <!-- <h6>Enhance flavor naturally</h6> -->
+        <h4>✅Energy Bars & Protein Balls </h4>
+        <!-- <h6>Power-packed sweetness</h6> -->
+        <h4>✅Breakfast Cereals </h4>
+        <!-- <h6>Start healthy and tasty</h6> -->
+        <h4>✅In traditional Sweets </h4>
+        <!-- <h6>Like Puran Poli, Kheer</h6> -->
+        <h4>✅In Cooking and Curries </h4>
+        <!-- <h6>Sambar(South india dishes), Gujarati dal, tamarind chutney</h6> -->
+        <h4>✅In Detox and Health Drinks </h4>
+        <!-- <h6>jeera-gud drink, post-workout natural energy booster</h6> -->
       </div>
       <div style="flex: 1;">
 
@@ -1066,7 +1108,7 @@ body.dark-mode .testimonial-section1 {
   
 <div class="testimonial-section1">
 <section id="testimonial-section" >
-  <h2 class="testimonial-heading" style="font-size: 32px;">What Our Customers Say</h2>
+  <h2 class="testimonial-heading">What Our Customers Say</h2>
   <div id="testimonial-slideshow">
     <div id="testimonial-content" class="testimonial-box"></div>
   </div>
@@ -1283,11 +1325,11 @@ window.addEventListener("click", function (event) {
   setInterval(showNextTestimonial, 3000);
 
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.getElementById("intro-overlay").classList.add("fade-out");
-    }, 3000); // 2 second delay
-  });
+  // window.addEventListener("load", () => {
+  //   setTimeout(() => {
+  //     document.getElementById("intro-overlay").classList.add("fade-out");
+  //   }, 3000); // 2 second delay
+  // });
 
 </script>
 
