@@ -90,7 +90,6 @@ body.dark-mode {
     .container1 img {
       width: 90%;
       height: 70vh;
-      border-radius: 10px;
       transition: transform 0.3s ease-in-out;
       object-fit: cover;
       border-radius: 20px;
@@ -153,22 +152,24 @@ body.dark-mode {
 }
 
 .benefits-text h1 {
-  text-align: center;
   font-size: 34px;
   color: #81be1c;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .benefits-text h4 {
   font-size: 18px;
   color: #ffd51e;
   margin: 10px 0 5px;
+  text-align: justify;
 }
 
 .benefits-text h6 {
   font-size: 16px;
   color: white;
   margin: 0 0 10px;
+  text-align: justify;
 }
 
 .container3 img:hover {
@@ -181,9 +182,8 @@ body.dark-mode {
       background-color: #846954;
       max-width: 100%;
       width: 100%;
-      margin: auto;
       display: flex;
-      gap: 40px;
+      /* gap: 10px; */
       object-fit: cover;
     }
 
@@ -192,7 +192,7 @@ body.dark-mode {
       color: white;
     }
     .text h1 {
-      text-align: center;
+      text-align: justify;
       margin-left: 10px;
       font-size: 32px;
       margin-top: 30px;
@@ -201,25 +201,29 @@ body.dark-mode {
   ;
     }
     .text p {
+      text-align: justify;
       margin-left: 20px;
       font-size: 18px;
       line-height: 1.6;
       margin-right: 20px;
+      margin-bottom: 10px;
     }
     .text h4 {
+      text-align: justify;
       font-size: 22px;
-      margin-left: 30px;
       font-size: 18px;
       line-height: 1.6;
       color: #ffd51e;
-      margin-top: 15px;
+      margin: 10px;
     }
     .text h6 {
+      text-align: justify;
       font-size: 16px;
       margin-left: 30px;
       font-size: 16px;
       line-height: 1.6;
-      color: #333;
+      color: white;
+      margin: 10px;
     }
     .footer {
   background-color: rgb(24, 56, 24); /* Dark Green */
@@ -703,34 +707,47 @@ body, html {
     gap: 20px;
   }
   .container2 img {
-    padding-right: 0;
-    padding-top: 0;
+    padding: 10px;
     height: auto; /* Adjust height on mobile */
   }
   .container2 .text-content {
     padding: 0 15px;
+  }
+  .benefits-image img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  }
+  .container1 img {
+  width: 100%;
+  height: 60vh;
+  border-radius: 20px;
+  object-fit: cover;
+  padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
   .container4 {
     display: flex;
-    flex-direction: column-reverse; /* ✅ Show table first, text after */
-    gap: 20px;
-    text-align: center;
+    flex-direction: column-reverse; 
   }
 }
 
 @media (max-width: 768px) {
   .container4 {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 10px; 
   }
+  .text h1 {
+    margin-top: 0px; 
+    margin-bottom: 10px;
+  }
+  .benefits-text h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+ }
 
-  .container4 h1,
-  .container4 p {
-    text-align: left;
-  }
 }
 @media (max-width: 768px) {
  /* Order Now Button */
@@ -761,12 +778,10 @@ body, html {
   width: 100%;
   overflow-x: auto;
   background-color:  #846954;
-  padding-right: 20px;
 }
 .table-container table {
   border-collapse: collapse;
   width: 100%;
-  /* min-width: 600px; Forces horizontal scroll on small screens */
   background-color: #5e402a; 
   color: white;
   margin-top: 20px;
@@ -919,13 +934,13 @@ body, html {
     <div class="container4">
       <div class="text" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
         <h1>Enjoy Jaggery Powder In:</h1>
-        <h4>Tea & Coffee –</h4><h6>A natural touch of sweetness</h6>
-        <h4>Ice Creams & Milkshakes –</h4><h6>Enhance flavor naturally</h6>
-        <h4>Energy Bars & Protein Balls –</h4><h6>Power-packed sweetness</h6>
-        <h4>Breakfast Cereals –</h4><h6>Start healthy and tasty</h6>
-        <h4>In traditional Sweets –</h4><h6>Like Puran Poli, Kheer</h6>
-        <h4>In Cooking and Curries –</h4><h6>Sambar(South india dishes), Gujarati dal, tamarind chutney</h6>
-        <h4>In Detox and Health Drinks –</h4><h6>jeera-gud drink, post-workout natural energy booster</h6>
+        <h4>✅Tea & Coffee –</h4><h6>A natural touch of sweetness</h6>
+        <h4>✅Ice Creams & Milkshakes –</h4><h6>Enhance flavor naturally</h6>
+        <h4>✅Energy Bars & Protein Balls –</h4><h6>Power-packed sweetness</h6>
+        <h4>✅Breakfast Cereals –</h4><h6>Start healthy and tasty</h6>
+        <h4>✅In traditional Sweets –</h4><h6>Like Puran Poli, Kheer</h6>
+        <h4>✅In Cooking and Curries –</h4><h6>Sambar(South india dishes), Gujarati dal, tamarind chutney</h6>
+        <h4>✅In Detox and Health Drinks –</h4><h6>jeera-gud drink, post-workout natural energy booster</h6>
       </div>
       <div style="flex: 1;">
 
