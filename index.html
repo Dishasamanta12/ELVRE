@@ -304,7 +304,7 @@ body.dark-mode {
 #backToTopBtn:hover {
   background-color: #555;
 }
-
+/* 
 #darkModeToggle {
   background: none;
   border: none;
@@ -314,33 +314,33 @@ body.dark-mode {
   font-size: 24px;
   margin-left: 30px;
   margin-right: 10px;
-}
+} */
 
-#darkModeToggle:hover {
+/* #darkModeToggle:hover {
   transform: scale(1.1);
-}
+} */
 
 /* Default (light mode) styles */
-.header, .footer {
+/* .header, .footer {
   background-color: rgb(24, 56, 24);
-}
+} */
 
 /* Dark mode styles */
-.dark-mode .header,
+/* .dark-mode .header,
 .dark-mode .footer {
   background-color: black;
-}
+} */
 
 
 /* Default light mode */
-.testimonial-section1{
+/* .testimonial-section1{
   background-color: rgb(24, 56, 24);
   color: white;
 }
 
 body.dark-mode .testimonial-section1{
     background-color: black;
-}
+} */
 
 
 /* Floating container for both buttons */
@@ -864,12 +864,55 @@ body, html {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
   }
-  #darkModeToggle {
-    color: white;
-    padding: 0 10px; 
-    margin-right: -240px;
-  }
 }
+/* Hide by default (for desktop) */
+.mobile-darkmode-toggle {
+  display: none;
+}
+.desktop-darkmode-toggle {
+  background: none;
+  display: block;
+  margin-left: auto;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-darkmode-toggle {
+    display: block;
+    margin-right: -190px;
+  }
+  .desktop-darkmode-toggle {
+    display: none;
+}
+}
+#darkModeToggleDesktop {
+  padding-right: 15px;
+  padding-bottom: 8px;
+}
+#darkModeToggleMobile,
+#darkModeToggleDesktop {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 22px;
+  transform: scale(1.1);
+}
+/* Default light theme styles */
+.header,
+.footer,
+.testimonial-section1 {
+  background-color: rgb(24, 56, 24);
+  color: white;
+}
+/* Dark mode overrides */
+body.dark-mode .header,
+body.dark-mode .footer,
+body.dark-mode .testimonial-section1 {
+  background-color: black !important;
+  color: white !important;
+}
+
 
     @keyframes fadeInOut {
       0% { opacity: 0; transform: translateY(-20px);}
@@ -893,11 +936,19 @@ body, html {
     <div id="logo">
       <img src="ELVRElogo1.png" alt="ELVRE Logo" /></div>  
     
-     <!-- Hamburger Button -->
-    <button id="darkModeToggle">🌙</button>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- Mobile Dark Mode Button -->
+  <div class="mobile-darkmode-toggle">
+    <button id="darkModeToggleMobile" onclick="toggleDarkMode()">🌙</button>
+  </div>
 
-    
+  <!-- Hamburger Button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Desktop Dark Mode Button -->
+  <div class="desktop-darkmode-toggle">
+    <button id="darkModeToggleDesktop" onclick="toggleDarkMode()">🌙</button>
+  </div>
+
     <nav id="mainNav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -905,6 +956,7 @@ body, html {
       <a href="#benefits">Benefits</a>
       <a href="#use">Uses</a>
       <a href="#contact">Contact</a>
+
     </nav>
   </header>
 
@@ -1105,13 +1157,6 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-//dark mode
-
-const toggleBtn = document.getElementById('darkModeToggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-
 //animated scroll
 ScrollReveal({
   reset: true,
@@ -1303,6 +1348,24 @@ window.addEventListener("click", function (event) {
 <script>
   function toggleMenu() {
     const nav = document.getElementById("mainNav");
+    nav.classList.toggle("active");
+  }
+
+  // Close menu on link click (for mobile)
+  document.querySelectorAll('#mainNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.getElementById("mainNav");
+      nav.classList.remove("active");
+    });
+  });
+</script>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
+  function toggleMenu() {
+    const nav = document.querySelector("nav");
     nav.classList.toggle("active");
   }
 </script>
