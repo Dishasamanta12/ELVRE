@@ -905,6 +905,11 @@ body.dark-mode .testimonial-section1 {
   color: white !important;
 }
 
+/* Hide dark mode button on mobile when menu is open */
+body.menu-open .mobile-darkmode-toggle {
+  display: none;
+}
+
 
     @keyframes fadeInOut {
       0% { opacity: 0; transform: translateY(-20px);}
@@ -1380,6 +1385,7 @@ window.addEventListener("click", function (event) {
   function toggleMenu() {
     const nav = document.querySelector("nav");
     nav.classList.toggle("active");
+    document.body.classList.toggle("menu-open"); // Add this line
   }
 </script>
 
